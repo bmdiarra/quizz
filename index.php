@@ -1,55 +1,22 @@
 
 <?php  
- session_start();  
+ session_start();
+ require_once("./traitements/fonctions.php");  
+ 
  $host = "localhost";  
  $username = "root";  
  $password = "";  
  $database = "php_sa";  
  $message = "";  
+ $connect = "";
+
+ if(isset($_POST['login']) && isset($_POST['pwd'])){
+ $login=""; $login = $_POST['login'];
+ $pwd=""; $pwd = $_POST['pwd'];
  
- try  
- {  
-      $connect = new PDO("mysql:host=$host; dbname=$database", $username, $password);  
-           
-      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
-        
-      if(isset($_POST["btn_submit"]))  
-      {  
-           if(empty($_POST["login"]) || empty($_POST["pwd"]))  
-           {  
-                $message = '<label>All fields are required</label>';  
-           }  
-           else  
-           {  
-                $query = "SELECT * FROM Personnage WHERE Login_personnage = :login AND Mdp_personnage = :pwd";  
-                $statement = $connect->prepare($query);  
-                $statement->execute(  
-                     array(  
-                          'login'     =>     $_POST["login"],  
-                          'pwd'     =>     $_POST["pwd"]  
-                     )  
-                );  
-                $count = $statement->rowCount();  
-                if($count > 0)  
-                {  
-                     $_SESSION["login"] = $_POST["login"];  
-                     $donnees = $statement->fetch();
-                     
-                     $_SESSION["page"] = $donnees["Role_personnage"];
-                     
-                     //header("location:login_success.php");  
-                }  
-                else  
-                {  
-                     $message = '<label>Wrong Data</label>';  
-                }  
-           }  
-      }  
- }  
- catch(PDOException $error)  
- {  
-      $message = $error->getMessage();  
- } 
+     connexion($login, $pwd, $host, $username, $password, $database, $message);
+}
+ 
 ?>
 
 <!DOCTYPE html>
