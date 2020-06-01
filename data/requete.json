@@ -1,0 +1,3 @@
+{
+    "connexion" : "SELECT * FROM Personnage WHERE '.$login.'==Login_personnage and '$mdp'==Mdp_personnage"
+}

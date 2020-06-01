@@ -1,0 +1,200 @@
+*{
+	font-family: anton Gill Sans Extrabold, sans-serif;
+	color: white;
+}
+
+body{
+	background-color: #E1E1E1;
+	background-image: url(../images/bgimage.png);
+	background-repeat: no-repeat;
+	background-position: 35% -2%;
+}
+
+.div_plaisirjouer{
+	height: 200px;
+}
+
+.txt_plaisirjouer{
+	text-align: center;
+	padding: 35px 10% 0px 10%; 
+	
+}
+
+.txt_bg{
+	background-color: #51BFD0;
+	color: white;
+	padding-left: 10%;
+}
+
+
+.contain_formgroup{
+	background-color: #C4C4C4;
+}
+
+.div_inscire{
+	text-align: center;
+	background-color: #042425;
+	margin: 0px 32% 0px 32%;
+}
+
+.txt_inscrire{
+	color: white;
+
+}
+
+.btn_connexion{
+	background-color: #51BFD0;
+}
+
+
+/* PARTIE INSCRIPTION */
+
+
+.bg_forminscription{
+	background-color: #51BFD0;	
+	padding: 10px;
+	margin-bottom: 10px; 
+	margin-left: 10px;
+	margin-right: 10px;  
+}
+
+.txt_retour{
+	color: white;
+}
+
+.div_inscrirejoueur{
+	background-color: #042425;
+	margin: 0px 25% 0px 26%;	
+}
+
+.avatar_joueur{
+	height: 300px;
+	width: 300px;
+	margin-bottom: 15px;
+}
+
+.txt_avatar{
+	text-align: center;
+}
+
+.img_inscri{
+	margin: 10px;
+}
+
+
+/*    joueur */
+
+.profil{
+	height: 107px;
+	margin: 0px 32% 0px 32%;
+	background-color: #51BFD0;
+}
+
+.profil h4{
+	text-align: center;
+}
+
+.img_profil{
+	height: 70px;
+	width: 90%;
+	margin-left: 10px;
+}
+
+.txt_profil{
+	background-color: #042425;
+	color: white;
+}
+
+.contain_pagination_liste{
+	
+}
+
+.contain_liste{
+	background-color: #51BFD0;
+	height: 97.1599%;
+	margin: 10px 0px 0px 0px;
+}
+
+.contain_pagination{
+	background-color: #51BFD0;
+	height: 97.1599%;
+	margin: 10px 0px 0px -2px;
+}
+
+.text_joueur{
+	text-align: center;
+}
+
+.btn_haut{
+	 
+}
+
+.btn_jouer_resultat{
+	padding-left: 34%;
+}
+
+.card_question{
+	margin: 10px 27% 10px 27%;
+}
+
+.btn_bas{
+	margin: 15px 0% 13px 24%; 
+}
+
+.div_question{
+	background-color: #042425;
+}
+
+.div_question h4{
+	color: white;
+	text-align: center;
+}
+
+.card-bodyq{
+	background-color: #70DEEF;
+}
+
+
+/* LISTE QUESTION */
+
+.btn_pour_admin{
+	font-size: 1em;
+}
+
+/* CREER ADMIN */
+
+.form_inscription_admin{
+	margin-top: 60px;
+}
+
+/* LISTE JOUEUR */
+
+.liste_joueur_admin{
+	height: 80%;
+}
+
+.btn_bas_listejoueur_admin{
+	margin-left: 23%;
+}
+
+/* CREER QUESTION */
+
+.creer_question{
+	margin: 20px;
+	margin-top: 40px;
+}
+
+.btn_plus{
+	color: black;
+	font-style: bold;
+	font-size: 2.8em; 
+	
+}
+
+.div_btnplus{
+	background-color: #70DEEF;
+	height: 40px;
+	
+
+}
+
