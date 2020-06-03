@@ -1,13 +1,4 @@
 
-<?php  
- session_start();
- require_once("./traitements/fonctions.php");  
- 
-$message = ""; 
-
-//define(ACTION,"action");
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,41 +30,19 @@ $message = "";
                 ?>
 
             </div>
-        </div> 
-
-<?php 
-               
-
-     if(isset($_GET["action"]))
-     {
-
-         // var_dump($_GET["action"]);
-          if($_GET["action"]=='connexion')
-          {    
-               //$_SESSION['action']=$_GET["action"];
-               
-               getConnexion($_POST);
-          }
-          else if($_GET["action"]=='inscription')
-          {
-               require_once './pages/inscription.php';
-          }
-     }
-     else
-     {  ?>
-          <div class="shadow" >
+        </div>
+        <div class="shadow" >
             
             <?php 
                 
-               require_once("./pages/connexion.php");
+                require_once("./pages/connexion.php");
             
             ?>
         
-        </div> 
-     <?php } 
- ?>
+        </div>		
+            
+</div>
 
- </div>
 
 
 <script type="text/javascript" src="./public/js/router.js"></script>
@@ -86,4 +55,3 @@ $message = "";
 
     </body>
 </html>
-

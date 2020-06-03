@@ -22,6 +22,7 @@
             </div>
             <div>
             <input type="submit" name="btn_submit" id="submit" onclick="getFormData();" class="btn btn-primary btn-lg btn_connexion" value="connexion"/>
+            <input type="button" name="inscription" id="inscription"  class="btn btn-primary btn-lg btn_connexion" value="inscription"/>
             </div>
     </form>
 </div>

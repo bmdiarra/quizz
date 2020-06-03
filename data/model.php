@@ -23,8 +23,7 @@
         }
          
         $connect = connect_bd();
-       // if(isset($_POST["btn_submit"]))  
-        //{  
+       
              if(empty($login) || empty($pwd))  
              {  
                   $message = '<label>All fields are required</label>';  
@@ -42,7 +41,6 @@
 
                 return $statement;
              }  
-      //  } 
    
     }
 

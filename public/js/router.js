@@ -1,16 +1,23 @@
 const form =document.getElementById('connexion-form');
 const container=document.getElementById('container');
 const inscription = document.getElementById('inscription');
+const listequestion = document.getElementById('listequestion');
 
-/*inscription.addEventListener('click',()=>{
+inscription.addEventListener('click',()=>{
     sendData('inscription',container,false);
-})*/
+})
 
 form.addEventListener('submit',()=>{
      
     sendData('connexion',container,true);
 
 })
+
+/*listequestion.addEventListener('submit',()=>{
+     
+    sendData('connexion',container,true);
+
+})*/
 
 //action  page que la fonction de doit ouvrir
 //contenair c'est ccontainer d"ou la page resultant doit etre affocher 

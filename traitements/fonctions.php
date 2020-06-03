@@ -12,7 +12,7 @@ require_once("./data/model.php");
                        $_SESSION["login"] = $post['login'];  
                        $donnees = $statement->fetch();
                        
-                       //$_SESSION["page"] = $donnees["Role_personnage"];
+                       //require_once("./pages/profil.php");
                        if($donnees["Role_personnage"] == "admin"){
                             require_once("./pages/admin.php");
                        }else{
@@ -24,6 +24,12 @@ require_once("./data/model.php");
                   {  
                        $message = '<label>Wrong Data</label>';  
                   }
+    }
+
+    function profil(){
+         if(isset($_SESSION["login"])){
+               require_once("./pages/profil.php");    
+         }
     }
 
 ?>
