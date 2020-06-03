@@ -3,20 +3,10 @@
  session_start();
  require_once("./traitements/fonctions.php");  
  
- $host = "localhost";  
- $username = "root";  
- $password = "";  
- $database = "php_sa";  
- $message = "";  
- $connect = "";
-
- if(isset($_POST['login']) && isset($_POST['pwd'])){
- $login=""; $login = $_POST['login'];
- $pwd=""; $pwd = $_POST['pwd'];
- 
-     connexion($login, $pwd, $host, $username, $password, $database, $message);
+$message = ""; 
+if(isset($_POST['login'])){
+     getConnexion($_POST);
 }
- 
 ?>
 
 <!DOCTYPE html>
