@@ -5,7 +5,7 @@
 </div>
 <div class="col-md-7 contain_formgroup">
 
-    <form class="" action="" method="post" enctype="multipart/form-data">
+    <form class="" action="Javascript:void(0);" method="" id="connexion-form" enctype="multipart/form-data">
             <div class="div_inscire">
                 <h1 class="txt_inscrire" ><strong>S'INSCRIRE</strong></h1>
             </div>
@@ -21,8 +21,9 @@
             <input type="password" class="form-control" name="pwd" id="formGroupExampleInput2" placeholder="Password">
             </div>
             <div>
-            <button type="submit" name="btn_submit" class="btn btn-primary btn-lg btn_connexion">Connexion</button>
+            <input type="submit" name="btn_submit" id="submit" onclick="getFormData();" class="btn btn-primary btn-lg btn_connexion" value="connexion"/>
             </div>
     </form>
 </div>
 </div>
+
