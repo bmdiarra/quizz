@@ -20,6 +20,15 @@ $message = "";
 </head>
 <body>
 <div class="container " id="container">
+
+    <?php
+    
+    if(isset($_POST["prenom_ins"])){
+       // var_dump($_POST);
+        $role = "joueur"; 
+        insert_donnee($_POST, $role); 
+    }
+    ?>
         <div class="div_plaisirjouer row">
             <div class="col-md-5">
                 

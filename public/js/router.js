@@ -2,6 +2,8 @@ const form =document.getElementById('connexion-form');
 const container=document.getElementById('container');
 const inscription = document.getElementById('inscription');
 const listequestion = document.getElementById('listequestion');
+const admin = document.getElementById('admin');
+const form_ins = document.getElementById('form-inscription');
 
 inscription.addEventListener('click',()=>{
     sendData('inscription',container,false);
@@ -13,12 +15,34 @@ form.addEventListener('submit',()=>{
 
 })
 
-/*listequestion.addEventListener('submit',()=>{
+try {
+    form_ins.addEventListener('submit',()=>{
+        
+        sendData('inscri',container,true);
+    })
+
+  container.addEventListener((change)=>{
+    
+
+    listequestion.addEventListener('click',()=>{
      
-    sendData('connexion',container,true);
+        sendData('listequestion',admin,false);
+    
+    
+    })
+  })
+    
 
-})*/
+} catch (error) {
+    
+}
 
+
+/*
+function listeq(){
+    sendData('listequestion',admin,false);
+}
+*/
 //action  page que la fonction de doit ouvrir
 //contenair c'est ccontainer d"ou la page resultant doit etre affocher 
 //is_post si la requette sera envoyer avec un formulaire; 

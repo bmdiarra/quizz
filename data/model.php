@@ -44,9 +44,39 @@
    
     }
 
+
+    function insert($post, $role){
+         
+     if(isset($post['login_ins']) && isset($post['pwd_ins']) && isset($post['prenom_ins']) && isset($post['nom_ins']) && isset($post['avatar_ins'])){
+          
+          $login = $post['login_ins']; $pwd = $post['pwd_ins']; $prenom = $post['prenom_ins']; $nom = $post['nom_ins'];  
+     }else{
+          echo "erreur 1";
+     }
+      
+     $connect = connect_bd();
+    
+          if(empty($login) || empty($pwd) || empty($prenom) || empty($nom) || empty($role) )  
+          {  
+               $message = '<label>All fields are required</label>';  
+          }  
+          else  
+          {  
+               echo "cool";
+               $query = "INSERT INTO Personnage (Nom_personnage, Prenom_personnage, Login_personnage, Role_personnage, Mdp_personnage) VALUES (:login, :pwd, :prenom, :nom, :role)";  
+               $statement = $connect->prepare($query);  
+               $statement->execute(  
+                    array(  
+                         'login'     =>     $login,  
+                         'pwd'     =>     $pwd,
+                         'prenom'     =>     $prenom,
+                         'nom'     =>     $nom,
+                         'role'     =>     $role  
+                    )  
+               ); 
+
+          }  
+
+     }
+
 ?>
-
-
-
-
-

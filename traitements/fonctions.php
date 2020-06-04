@@ -26,10 +26,8 @@ require_once("./data/model.php");
                   }
     }
 
-    function profil(){
-         if(isset($_SESSION["login"])){
-               require_once("./pages/profil.php");    
-         }
+    function insert_donnee($post, $role){
+          insert($post, $role);
     }
 
 ?>
