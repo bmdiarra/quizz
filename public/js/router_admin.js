@@ -1,32 +1,10 @@
-const form =document.getElementById('connexion-form');
-const container=document.getElementById('container');
-const inscription = document.getElementById('inscription');
+
 const listequestion = document.getElementById('listequestion');
 const admin = document.getElementById('admin');
-const form_ins = document.getElementById('form-inscription');
 
-inscription.addEventListener('click',()=>{
-    sendData('inscription',container,false);
+listequestion.addEventListener('click',()=>{ 
+    sendData('listequestion',admin,false);
 })
-
-form.addEventListener('submit',()=>{
-     
-    sendData('connexion',container,true);
-
-})
-
-try {
-    form_ins.addEventListener('submit',()=>{        
-        sendData('inscri',container,true);
-    })
-
-    listequestion.addEventListener('click',()=>{ 
-        sendData('listequestion',admin,false);
-    })
-    
-} catch (error) {
-    
-}
 
 
 /*

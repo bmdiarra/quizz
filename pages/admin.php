@@ -20,7 +20,7 @@
                   </div>
                </div>
                <?php
-               
+                  var_dump($_GET['action']);
                   if(isset($_GET['action']) && $_GET['action']=='listequestion'){
                       require_once("./pages/listequestion.php");
                   }
@@ -36,4 +36,4 @@
    		
    	</div>
 
-      <script type="text/javascript" src="./public/js/router.js"></script>
+      <script type="text/javascript" src="./public/js/router_admin.js"></script>
