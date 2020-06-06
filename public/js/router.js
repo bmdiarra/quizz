@@ -5,24 +5,23 @@ const listequestion = document.getElementById('listequestion');
 const admin = document.getElementById('admin');
 const form_ins = document.getElementById('form-inscription');
 
-inscription.addEventListener('click',()=>{
-    sendData('inscription',container,false);
-})
-
-form.addEventListener('submit',()=>{
-     
-    sendData('connexion',container,true);
-
-})
 
 try {
+    inscription.addEventListener('click',()=>{
+        sendData('inscription',container,false);
+    })
+    
+    form.addEventListener('submit',()=>{
+         
+        sendData('connexion',container,true);
+    
+    })
+    
     form_ins.addEventListener('submit',()=>{        
         sendData('inscri',container,true);
     })
 
-    listequestion.addEventListener('click',()=>{ 
-        sendData('listequestion',admin,false);
-    })
+    
     
 } catch (error) {
     

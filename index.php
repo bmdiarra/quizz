@@ -5,7 +5,6 @@
  
 $message = ""; 
 
-//define(ACTION,"action");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +23,7 @@ $message = "";
     <?php
     
     if(isset($_POST["prenom_ins"])){
-       // var_dump($_POST);
+       
         $role = "joueur"; 
         insert_donnee($_POST, $role); 
     }
@@ -39,10 +38,9 @@ $message = "";
                 </div>
                 <?php
                     
-                    if(isset($_GET["action"]) && $_GET["action"] =='connexion'){
+                    if((isset($_GET["action"]) && $_GET["action"] =='connexion') || isset($_SESSION['page'])){
                             require_once("./pages/profil.php");
                     }
-                   // var_dump($_POST['login']);
 
                     
                 ?>
@@ -51,15 +49,17 @@ $message = "";
         </div> 
 
 <?php 
-               
+              //var_dump($_SESSION['page']); 
+              if(isset($_SESSION['page'])){
+                  require_once($_SESSION['page']);
+              }else
 
      if(isset($_GET["action"]))
      {
-
-         // var_dump($_GET["action"]);
+         
           if($_GET["action"]=='connexion')
           {    
-               //$_SESSION['action']=$_GET["action"];
+              
                
                getConnexion($_POST);
           }

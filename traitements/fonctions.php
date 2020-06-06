@@ -14,8 +14,10 @@ require_once("./data/model.php");
                        
                        //require_once("./pages/profil.php");
                        if($donnees["Role_personnage"] == "admin"){
+                            $_SESSION['page'] = "./pages/admin.php";
                             require_once("./pages/admin.php");
                        }else{
+                            $_SESSION['page'] = "./pages/joueur.php";
                             require_once("./pages/joueur.php");
                        }
                        
