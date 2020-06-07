@@ -1,8 +1,9 @@
 
 function fileContentLoader(target, fileName, data={date:0}){
-    console.log(`pages/${fileName}`);
+   
     target.load(`pages/${fileName}`,data,function(response, status,detail){        
          if(status === 'error'){
+             
             $("#contain_admin").html(`<p class="text-center alert alert-danger col">Le contenu demandé est introuvable!</p>`);
             //ou bien
             //$("#table").html(`<p class="text-center alert alert-danger col">Code Erreur : ${detail.status}, ${detail.statusText}</p>`);
@@ -19,12 +20,8 @@ function fileContentLoader(target, fileName, data={date:0}){
 
 
 
-
-
-
-
 //Events
-//$('form')
+$('form')
 
 $(document).ready(function(){
     const contain_admin = $('#contain_admin');
@@ -33,7 +30,7 @@ $(document).ready(function(){
 })
 
 //Link
-$('.nav-link').click(function(e){
+$('.btn_pour_admin').click(function(e){
     const contain_admin = $('#contain_admin');
     
     if(e.target.id === 'listequestion'){
