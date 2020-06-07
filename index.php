@@ -59,9 +59,7 @@ $message = "";
          
           if($_GET["action"]=='connexion')
           {    
-              
-               
-               getConnexion($_POST);
+            getConnexion($_POST);
           }
           else if($_GET["action"]=='inscription')
           {

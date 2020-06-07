@@ -12,9 +12,7 @@ try {
     })
     
     form.addEventListener('submit',()=>{
-         
         sendData('connexion',container,true);
-    
     })
     
     form_ins.addEventListener('submit',()=>{        

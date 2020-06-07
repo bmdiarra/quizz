@@ -1,8 +1,8 @@
 
 function fileContentLoader(target, fileName, data={date:0}){
-   
+    
     target.load(`pages/${fileName}`,data,function(response, status,detail){        
-         if(status === 'error'){
+        if(status === 'error'){
              
             $("#contain_admin").html(`<p class="text-center alert alert-danger col">Le contenu demandé est introuvable!</p>`);
             //ou bien
@@ -36,6 +36,10 @@ $('.btn_pour_admin').click(function(e){
     if(e.target.id === 'listequestion'){
         fileContentLoader(contain_admin,'listequestion.php');
     }else if(e.target.id === 'creeradmin'){
-        fileContentLoader(contain_admin,'inscription.php');
+        fileContentLoader(contain_admin,'inscri.php');
+    }else if(e.target.id === 'listejoueur'){
+        fileContentLoader(contain_admin,'listejoueur.php');
+    }else if(e.target.id === 'creerquestion'){
+        fileContentLoader(contain_admin,'creerquestion.php');
     }
 });
