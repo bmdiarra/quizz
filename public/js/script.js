@@ -36,6 +36,6 @@ $('.btn_pour_admin').click(function(e){
     if(e.target.id === 'listequestion'){
         fileContentLoader(contain_admin,'listequestion.php');
     }else if(e.target.id === 'creeradmin'){
-        fileContentLoader(contain_admin,'creeradmin.php');
+        fileContentLoader(contain_admin,'inscription.php');
     }
 });

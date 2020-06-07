@@ -35,7 +35,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 "https://code.jquery.com/jquery-3.2.1.min.js"
-"https://code.jquery.com/jquery-3.5.0.js"-->
+"https://code.jquery.com/jquery-3.5.0.js"
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="public/js/script.js"></script>
+<script src="public/js/script.js"></script>-->
 
