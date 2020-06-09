@@ -6,7 +6,7 @@
         try  
         {  
             $connect = new PDO("mysql:host=localhost; dbname=php_sa", 'root', '');
-          //  $connect = new PDO("mysql:host=mysql-bmdconception.alwaysdata.net; dbname=bmdconception_bd", '206341', 'bmd2407237');  
+           
             $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
             
             return $connect;

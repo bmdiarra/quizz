@@ -49,3 +49,39 @@
 			      </div>
 
 			   </form>
+<script>
+
+            $('#btn_inscrire').click(function(){
+        const prenom_ins = $('#prenom_ins').val();
+        const nom_ins = $('#nom_ins').val();
+        const login_ins = $('#login_ins').val();
+        const pwd_ins = $('#pwd_ins').val();
+        const avatar_ins = $('#avatar_ins').val();
+        //console.log($('form').serialize());
+        if(tel == '' || mnt ==''){
+            return false;
+        }
+
+        $.ajax({
+                type: "POST",
+                url: "http://localhost/QUIZZ_BD/data/save.php",
+                //data: $('form').serialize(),
+                data: {prenom_ins:prenom_ins,nom_ins:nom_ins,login_ins:login_ins,pwd_ins:pwd_ins,avatar_ins:avatar_ins},
+                dataType: "JSON",
+                success: function (data) {
+                   /*if(data){
+                       $('#table').load('pages/table',{date:1});*/ 
+                      /* 
+                      OU BIEN
+                      $('#tbody').append(`
+                        <tr class="text-center">
+                            <td>nouvelleHeure</td>
+                            <td>nouveauTel</td>
+                            <td>nouveauMont</td>
+                        </tr>
+                    `)*/
+                   }
+                }
+            });
+    })
+</script>
