@@ -8,6 +8,7 @@
                       <th scope="col">Nom</th>
                       <th scope="col">Prenom</th>
                       <th scope="col">Score</th>
+                      <th scope="col"></th>
                     </tr>
                   </thead>
                   <tbody id="tbody">
@@ -16,6 +17,10 @@
                       <td>Mark</td>
                       <td>Otto</td>
                       <td>@mdo</td>
+                      <td>
+                      <button type="button" class="btn btn-danger btn-lg">suppr</button>
+                      <button type="button" class="btn btn-primary btn-lg">modif</button>
+                      </td>
                     </tr>
                     
                   </tbody>
@@ -75,18 +80,30 @@
         })
     });
 
+    
+
     function printData(data,tbody){
       
         $.each(data, function(indice,Personnage){
-          console.log(Personnage);
+          
             tbody.append(`
             <tr class="text-center">
                 <th scope="row">${Personnage.Num_personnage}</th>
                 <td>${Personnage.Prenom_personnage}</td>
                 <td>${Personnage.Nom_personnage}</td>
                 <td>${Personnage.Score_personnage}</td>
+                <td> 
+                    <button type="button" id="suppr" onclick="delete(${Personnage.Num_personnage});" class="btn btn-danger btn-lg">suppr</button>
+                    <button type="button" id="modif" class="btn btn-primary btn-lg">modif</button>
+                </td>
             </tr>
         `);
     });
 }
+
+$("#suppr").click({
+      
+    })
+
+
 </script>
