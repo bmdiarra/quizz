@@ -12,19 +12,6 @@ require_once "model2.php";
             
     ";
    
-
-   /* if($date==1){
-        $date = date('Y-m-d');
-        $sql = "
-        SELECT * 
-        FROM vente
-        WHERE date= DATE('{$date}')
-        ORDER BY id DESC
-        LIMIT {$limit} 
-        OFFSET {$offset}
-";
-        
-    }*/
     $req = $db->query($sql);
     $result = $req->fetchAll(2);
 

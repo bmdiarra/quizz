@@ -1,14 +1,21 @@
-<!-- include database -->
+
 
 <?php
 require_once "model2.php";
 
 global $db;
-  // sorry need to get id 
+  
 
   $id = $_POST['delete_id'];
-  $query = mysqli_query($db,"DELETE FROM categories WHERE id='$id'");
+  
+  $sql ="
+  DELETE FROM Personnage
+  WHERE Num_personnage = '$id'
+  
+";
 
-  var_dump($query);
+$req = $db->query($sql);
+
+  var_dump($req);
 
  ?>

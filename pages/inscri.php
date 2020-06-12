@@ -58,9 +58,9 @@
         const pwd_ins = $('#pwd_ins').val();
         const avatar_ins = $('#avatar_ins').val();
         //console.log($('form').serialize());
-        if(tel == '' || mnt ==''){
+        /*if(tel == '' || mnt ==''){
             return false;
-        }
+        }*/
 
         $.ajax({
                 type: "POST",
@@ -69,19 +69,9 @@
                 data: {prenom_ins:prenom_ins,nom_ins:nom_ins,login_ins:login_ins,pwd_ins:pwd_ins,avatar_ins:avatar_ins},
                 dataType: "JSON",
                 success: function (data) {
-                   /*if(data){
-                       $('#table').load('pages/table',{date:1});*/ 
-                      /* 
-                      OU BIEN
-                      $('#tbody').append(`
-                        <tr class="text-center">
-                            <td>nouvelleHeure</td>
-                            <td>nouveauTel</td>
-                            <td>nouveauMont</td>
-                        </tr>
-                    `)*/
+                   
                    }
-                }
+                })
             });
-    })
+    
 </script>
