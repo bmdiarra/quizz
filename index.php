@@ -2,7 +2,7 @@
 <?php  
  session_start();
  require_once("./traitements/fonctions.php");  
- 
+ //session_destroy();
 $message = ""; 
 
 ?>
@@ -59,7 +59,16 @@ $message = "";
          
           if($_GET["action"]=='connexion')
           {    
-            getConnexion($_POST);
+            $donnees = getConnexion($_POST);
+            if($donnees["Role_personnage"] == "admin"){
+                $_SESSION['page'] = "./pages/admin.php";
+                require_once($_SESSION['page']);
+                
+           }else{
+                $_SESSION['page'] = "./pages/joueur.php";
+                require_once("./pages/joueur.php");
+                
+           }
           }
           else if($_GET["action"]=='inscription')
           {

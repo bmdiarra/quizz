@@ -92,20 +92,18 @@
         $.each(data, function(indice,Personnage){
           let id = Personnage.Num_personnage;
             tbody.append(`
-            <tr class="text-center" id="+${Personnage.Num_personnage}+">
+            <tr class="text-center" id='"+${Personnage.Num_personnage}+"'>
                 <th scope="row">${Personnage.Num_personnage}</th>
                 <td>${Personnage.Prenom_personnage}</td>
                 <td>${Personnage.Nom_personnage}</td>
                 <td>${Personnage.Score_personnage}</td>
                 <td> 
-                    <button type="button" id="suppr" onClick="delete_perso("+${Personnage.Num_personnage}+");" class="btn btn-danger btn-lg">suppr</button>
+                    <button type="button" id="suppr" onClick="delete_perso('"+${Personnage.Num_personnage}+"');" class="btn btn-danger btn-lg">suppr</button>
                     <button type="button" id="modif"  onClick="modifi_perso(6);" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg">modif</button>
                 </td>
             </tr>
         `);
         
-        
-
     });
 }
 
@@ -125,7 +123,6 @@ function delete_perso(id){
               }
          });
        }
-
 }
 
 function modifi_perso(id){
@@ -134,7 +131,7 @@ function modifi_perso(id){
         const login_ins = $('#login_ins').val();
         const pwd_ins = $('#pwd_ins').val();
         const avatar_ins = $('#avatar_ins').val();
-        console.log(prenom_ins);
+        
   $.ajax({
         type: "POST",
         url: "http://localhost/QUIZZ_BD/data/modif.php",

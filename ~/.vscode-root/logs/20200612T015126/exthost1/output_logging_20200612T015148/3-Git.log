@@ -1,0 +1,95 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /opt/lampp/htdocs/QUIZZ_BD
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :index.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/index.php
+> git cat-file -s b0f02335a6b3817deaec05de18438a0158ac243b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :pages/listejoueur.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/listejoueur.php
+> git cat-file -s a86856890e30b2943bbc2e9a643b85a5217140ea
+> git show :pages/admin.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/admin.php
+> git cat-file -s e511f2bab1ed5c7b6c769fbf49ba64cb624216b8
+> git show :pages/connexion.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/connexion.php
+> git cat-file -s 32380ef0598d718dba911658eab2753d06b432b8
+> git show :pages/creerquestion.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/creerquestion.php
+> git cat-file -s 7ff4384cfdfdc426fcd2b74027cf4bf26a812328
+> git show :pages/deconnexion.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/deconnexion.php
+> git cat-file -s 39113ce0c344c7ac3a69fcddb5092d30f09b1e60
+> git show :pages/inscri.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/inscri.php
+> git cat-file -s 6a0309f9c73c8319e08063ce6b0eb4765fbd7f61
+> git show :pages/inscription.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/inscription.php
+> git cat-file -s 6ff3fe57d4996bc1f1b79a4ac9501f5fa8dfd1ce
+> git show :pages/joueur.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/joueur.php
+> git cat-file -s 2fc439f5ea88f87ebac5663c2cf6410cfb7ad59f
+> git show :pages/listejoueur.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/listejoueur.php
+> git cat-file -s a86856890e30b2943bbc2e9a643b85a5217140ea
+> git show :pages/listequestion.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/listequestion.php
+> git cat-file -s f8199e6cd67576dd374ffc2dee94bdcf1aae05fe
+> git show :pages/profil.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/profil.php
+> git cat-file -s 39598caae435fda2a42ac9d5b58068d204a65830
+> git show :pages/template.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/template.php
+> git cat-file -s 7d1424b26c1413e2de1ac2018b4456b226246140
+> git show :data/delete.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/data/delete.php
+> git cat-file -s 151fa593c83456aae4ae59bb8faf6bdf5502e7fb
+> git show :pages/admin.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/admin.php
+> git cat-file -s e511f2bab1ed5c7b6c769fbf49ba64cb624216b8
+> git show :index.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/index.php
+> git cat-file -s b0f02335a6b3817deaec05de18438a0158ac243b
+> git show :pages/inscri.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/inscri.php
+> git cat-file -s 6a0309f9c73c8319e08063ce6b0eb4765fbd7f61
+> git show :pages/admin.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/pages/admin.php
+> git cat-file -s e511f2bab1ed5c7b6c769fbf49ba64cb624216b8
+> git show :index.php
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/index.php
+> git cat-file -s b0f02335a6b3817deaec05de18438a0158ac243b
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :public/js/script.js
+> git ls-files --stage -- /opt/lampp/htdocs/QUIZZ_BD/public/js/script.js
+> git cat-file -s d5c7d47f86d2b30c83bac05016148efa57b91f0b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template

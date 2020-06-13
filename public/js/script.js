@@ -44,23 +44,6 @@ $('.btn_pour_admin').click(function(e){
     }
 });
 
-function delete(id){
-   
-    if(confirm('are You sure?')){
-      
-      $.ajax({
- 
-           type:'post',
-           url:'delete.php',
-           data:{delete_id:id},
-           success:function(data){
-           
-                $('#delete'+id).hide('slow');
- 
-           }
-      });
-    }
- }
  
   
       

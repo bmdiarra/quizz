@@ -1,0 +1,3 @@
+[2020-06-12 01:51:29.973] [sharedprocess] [info] main {"machineId":"67dab824d9f4e998b4aa4f0f47fbe3ae82df4123e48c30a60e637f6b990de90d","windowId":2}
+[2020-06-12 01:51:30.009] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/QUIZZ_BD/~/.vscode-root/User/snippets'
+[2020-06-12 01:52:09.992] [sharedprocess] [info] Starting to clean up unused language packs.
