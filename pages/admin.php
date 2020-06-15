@@ -12,8 +12,8 @@
   
                      <a href="" type="button" id="listequestion" class="btn btn-primary btn-lg btn_pour_admin">Liste<br/>Question</a>
                      <button href="" type="button" id="creeradmin" value="creera" class="btn btn-primary btn-lg btn_pour_admin">Creer<br/>Admin</button>
-                     <button type="button" id="listejoueur" value="listej" class="btn btn-primary btn-lg btn_pour_admin">Liste<br/>Joueur</button>
-                     <button type="button" id="creerquestion" value="creerq" class="btn btn-primary btn-lg btn_pour_admin">Creer<br/>Question</button>
+                     <button href="" type="button" id="listejoueur" value="listej" class="btn btn-primary btn-lg btn_pour_admin">Liste<br/>Joueur</button>
+                     <button href="" type="button" id="creerquestion" value="creerq" class="btn btn-primary btn-lg btn_pour_admin">Creer<br/>Question</button>
 
                   </div>
                   <div class="col-md-3">

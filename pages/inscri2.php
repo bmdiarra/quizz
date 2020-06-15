@@ -1,4 +1,4 @@
-<form class="" action="" id="form-inscription" method="post">
+<form class="" id="form-inscription" method="post">
         
                  <div class="bg_forminscription row">
 
@@ -49,8 +49,8 @@
 			      </div>
 
 			   </form>
-<script>
 
+<script>
    $(document).ready(function(){
       
       $('#btn_inscrire').click(function(){
@@ -59,17 +59,15 @@
         const nom_ins = $('#nom_ins').val();
         const login_ins = $('#login_ins').val();
         const pwd_ins = $('#pwd_ins').val();
-        //const avatar_ins = $('#avatar_ins').val();
-        //console.log(pwd_ins, avatar_ins);
-
+        
         $.ajax({
                 type: "POST",
-                url: "http://localhost/QUIZZ_BD/data/save.php",
+                url: "http://localhost/QUIZZ_BD/data/modif.php",
                
                 data: {prenom_ins:prenom_ins, nom_ins:nom_ins, login_ins:login_ins, pwd_ins:pwd_ins},
                 dataType: "JSON",
                 success: function (data) {
-                   //alert(data);
+                   alert(data);
                 }
                 
             });
@@ -77,3 +75,5 @@
    });
 
 </script>
+
+

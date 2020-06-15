@@ -42,13 +42,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-
-        <?php require_once("./inscri.php"); ?>
+      <?php var_dump($_POST['num_perso']); ?>
+        <?php require_once("./inscri2.php"); ?>
 
       </div>
       <div class="modal-footer">
@@ -63,6 +64,7 @@
 
               <script>
 
+    let _id;
 
     $(document).ready(function(){
       
@@ -92,14 +94,14 @@
         $.each(data, function(indice,Personnage){
           let id = Personnage.Num_personnage;
             tbody.append(`
-            <tr class="text-center" id='"+${Personnage.Num_personnage}+"'>
+            <tr class="text-center" id=\"${Personnage.Num_personnage}\">
                 <th scope="row">${Personnage.Num_personnage}</th>
                 <td>${Personnage.Prenom_personnage}</td>
                 <td>${Personnage.Nom_personnage}</td>
                 <td>${Personnage.Score_personnage}</td>
                 <td> 
-                    <button type="button" id="suppr" onClick="delete_perso('"+${Personnage.Num_personnage}+"');" class="btn btn-danger btn-lg">suppr</button>
-                    <button type="button" id="modif"  onClick="modifi_perso(6);" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg">modif</button>
+                    <button type="button" onClick="delete_perso(${Personnage.Num_personnage});" class="btn btn-danger btn-lg">suppr</button>
+                    <button type="button" onClick="modifi_perso(${Personnage.Num_personnage});" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg">modif</button>
                 </td>
             </tr>
         `);
@@ -110,6 +112,8 @@
 
 
 function delete_perso(id){
+  let _id;
+
   if(confirm('are You sure?')){
          
          $.ajax({
@@ -125,25 +129,36 @@ function delete_perso(id){
        }
 }
 
-function modifi_perso(id){
+function modifi_perso(id){      
+   _id = id;
+}
+
+
+
+      
+      $('#btn_inscrire').click(function(){
+         
         const prenom_ins = $('#prenom_ins').val();
         const nom_ins = $('#nom_ins').val();
         const login_ins = $('#login_ins').val();
         const pwd_ins = $('#pwd_ins').val();
         const avatar_ins = $('#avatar_ins').val();
+        //console.log(pwd_ins, avatar_ins);
         
-  $.ajax({
-        type: "POST",
-        url: "http://localhost/QUIZZ_BD/data/modif.php",
-        //data: $('form').serialize(),
-        data: {Num_personnage:id,nom_ins:prenom_ins,nom_ins:nom_ins,login_ins:login_ins,pwd_ins:pwd_ins,avatar_ins:avatar_ins},
-        dataType: "JSON",
-        success: function (data) {
-              console.log(data);
-            }
-        });
-          
-}
+
+        $.ajax({
+                type: "POST",
+                url: "http://localhost/QUIZZ_BD/data/modif.php",
+               
+                data: {num_pers:_id, prenom_ins:prenom_ins, nom_ins:nom_ins, login_ins:login_ins, pwd_ins:pwd_ins, avatar_ins:avatar_ins},
+                dataType: "text",
+                success: function (data) {
+                   alert(data);
+                }
+                
+            });
+    });
+   
 
 
 </script>
